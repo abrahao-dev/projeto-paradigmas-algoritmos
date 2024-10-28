@@ -1,8 +1,5 @@
 # main.py
 
-# This is a simple Hello World program
-print("Hello, World!")
-
 # Open a .txt file and read its contents into a list
 with open('./tasks/aleatorio_1k.txt', 'r') as file:  # Replace 'your_file.txt' with your actual file name
     lines = file.readlines()  # Read all lines into a list
