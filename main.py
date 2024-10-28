@@ -1,9 +1,14 @@
 # main.py
 
-# Open a .txt file and read its contents into a list
-with open('./tasks/aleatorio_1k.txt', 'r') as file:  # Replace 'your_file.txt' with your actual file name
-    lines = file.readlines()  # Read all lines into a list
+# Abrir um arquivo .txt e ler seu conteúdo em uma lista
+with open('./tasks/aleatorio_1k.txt', 'r') as file:  # Substitua 'your_file.txt' pelo nome do seu arquivo
+    lines = file.readlines()  # Ler todas as linhas em uma lista
 
-# Now 'lines' contains each line of the file as an element in the list
-# You can print the list to verify
-print(lines)
+# Extrair todos os números das linhas e colocá-los em uma lista
+numeros = [int(num) for line in lines for num in line.split() if num.isdigit()]  # Selecionar todos os números
+
+# Aplicar o algoritmo de ordenação (usando o método sort)
+numeros.sort()  # Ordenar a lista de números
+
+# Imprimir a lista ordenada
+print(numeros)  # Exibir a lista de números ordenados
